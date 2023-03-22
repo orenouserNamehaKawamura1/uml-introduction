@@ -1,0 +1,14 @@
+@startuml ホテル宿泊予約
+    left to right direction
+    actor 利用者 #DDDDDD;line:black;line.bold;
+    
+    rectangle ホテル{
+    package (<u>予約</u>\n拡張点\nキャンペーン中)  as event
+    usecase  ログイン
+    usecase キャンペーン
+    }
+    利用者 --> event
+    event --> ログイン : <<include>>
+    キャンペーン --> event : <<extend>>
+    
+@enduml

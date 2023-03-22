@@ -1,0 +1,8 @@
+@startuml ホテル
+    left to right direction
+    actor 経営者 #DDDDDD;line:black;line.bold;
+    actor 従業員 #DDDDDD;line:black;line.bold;
+
+
+    経営者 --> 従業員 : <<generalization>>
+@enduml
