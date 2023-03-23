@@ -1,0 +1,26 @@
+@startuml 演習2-8
+    left to right direction
+    actor 利用者 as user #DDDDDD;line:black;line.bold;
+    actor ホテル従業員 as employee #DDDDDD;line:black;line.bold;
+    actor ホテル管理者 as admin #DDDDDD;line:black;line.bold;
+    rectangle ホテル予約システム{
+        usecase ログイン as login
+        usecase 空室状況閲覧 as reading
+        usecase 空室状況入力 as input
+        usecase (<u>客室予約</u>\n拡張点\nキャンペーン期間) as reserve
+        usecase 予約集計 as aggregation
+        usecase 会員登録 as register
+        usecase キャンペーン
+    }
+    user --> register
+    キャンペーン -[dashed]-> reserve : <<extendes>>
+    reserve -[dotted]-> login : <<include>>
+    register -[dashed]-> reserve : <<extendes>>
+    input -[dotted]-> login : <<include>>
+    aggregation -[dotted]-> login : <<include>>
+    user --> reading
+    employee --> input
+    admin --> aggregation
+    admin <|-- employee 
+
+@enduml
