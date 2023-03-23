@@ -5,6 +5,6 @@
         usecase 注文商品確認 as confirm
         usecase 出荷状況登録 as register
     }
-    従業員 --> confirm
-    従業員 --> register
+    販売部 --> confirm
+    販売部 --> register
 @enduml
