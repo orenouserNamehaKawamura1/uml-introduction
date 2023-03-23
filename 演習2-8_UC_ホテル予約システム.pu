@@ -21,6 +21,6 @@
     user --> reading
     employee --> input
     admin --> aggregation
-    admin <|-- employee 
+    employee  <|-- admin 
 
 @enduml
