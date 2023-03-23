@@ -9,6 +9,5 @@
     }
     社員 --> reference
     人事担当者 --> register
-    人事担当者 --> change : 変更届が提出された場合
-    社員 --> 人事担当者 : 変更届
+    人事担当者 --> change
 @enduml
