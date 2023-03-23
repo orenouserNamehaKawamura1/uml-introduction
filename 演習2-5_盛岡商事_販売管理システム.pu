@@ -1,10 +1,10 @@
 @startuml 演習2-5
     left to right direction
-    actor 販売部 #DDDDDD;line:black;line.bold;
+    actor 出荷担当者 #DDDDDD;line:black;line.bold;
     rectangle 販売管理システム{
         usecase 注文商品確認 as confirm
         usecase 出荷状況登録 as register
     }
-    販売部 --> confirm 
-    販売部 --> register
+    出荷担当者 --> confirm 
+    出荷担当者 --> register
 @enduml
