@@ -5,11 +5,11 @@
     actor ホテル管理者 as admin #DDDDDD;line:black;line.bold;
     rectangle ホテル予約システム{
         usecase ログイン as login
-        usecase 空室状況閲覧 as reading
-        usecase 空室状況入力 as input
+        usecase 空室状況閲覧する as reading
+        usecase 空室状況入力する as input
         usecase (<u>客室予約</u>\n拡張点\nキャンペーン期間) as reserve
-        usecase 予約集計 as aggregation
-        usecase 会員登録 as register
+        usecase 予約集計する as aggregation
+        usecase 会員登録する as register
         usecase キャンペーン
     }
     user --> register

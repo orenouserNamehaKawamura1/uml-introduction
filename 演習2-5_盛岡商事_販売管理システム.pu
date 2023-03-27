@@ -2,8 +2,8 @@
     left to right direction
     actor 出荷担当者 #DDDDDD;line:black;line.bold;
     rectangle 販売管理システム{
-        usecase 注文商品確認 as confirm
-        usecase 出荷状況登録 as register
+        usecase 注文商品確認する as confirm
+        usecase 出荷状況登録する as register
     }
     出荷担当者 --> confirm 
     出荷担当者 --> register
