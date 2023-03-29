@@ -1,0 +1,23 @@
+@startuml
+    left to right direction
+    object "<u>車: 車</u>" as car1 {
+    
+    }
+    object "<u> タイヤ1: タイヤ1</u>" as t1 {
+    
+    }
+    object "<u>タイヤ2: タイヤ2</u>" as t2 {
+    
+    }
+    object "<u>タイヤ3: タイヤ3</u>" as t3 {
+    
+    }
+    object "<u>タイヤ4: タイヤ4</u>" as t4 {
+    
+    }
+    car1 -- t1
+    car1 -- t2
+    car1 -- t3
+    car1 -- t4
+
+@enduml
