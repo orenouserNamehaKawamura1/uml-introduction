@@ -1,4 +1,4 @@
-@startuml
+@startuml Web画像検索
 hide footbox
 actor ":ユーザ" as user
 participant ":ブラウザ" as browse
@@ -14,7 +14,7 @@ activate user
                 image -> image :画像ファイルを探す
                 image --> web :画像ファイルを渡す
             deactivate image
-        web --> browse :画像ファイルを渡す
+        web --> browse  :画像ファイルを渡す
      browse --> user :画像の閲覧
     deactivate browse
 deactivate user
