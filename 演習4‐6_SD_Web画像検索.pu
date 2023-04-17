@@ -12,9 +12,9 @@ activate user
             activate image
                 web -> image :命令を渡す
                 image -> image :画像ファイルを探す
-                image --> web :画像ファイル
+                image --> web :画像ファイルを渡す
             deactivate image
-        web --> browse :画像ファイル
+        web --> browse :画像ファイルを渡す
      browse --> user :画像の閲覧
     deactivate browse
 deactivate user
