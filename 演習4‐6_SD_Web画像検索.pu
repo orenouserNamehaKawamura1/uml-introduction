@@ -14,7 +14,7 @@ activate user
                 image -> image :画像ファイルを探す
                 image --> web :画像ファイル
             deactivate image
-        web --> browse 画像ファイル
+        web --> browse :画像ファイル
      browse --> user :画像の閲覧
     deactivate browse
 deactivate user
