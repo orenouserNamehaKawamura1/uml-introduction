@@ -1,0 +1,27 @@
+@startuml
+hide footbox
+actor ":会員" as user
+participant "商品検索画面" as boudary <<boudary>>
+participant ":商品検索コントローラ" as control <<control>>
+participant ":商品" as entity <<entity>>
+participant ":商品カテゴリ" as category <<entity>>
+activate user
+    user -> boudary : 商品検索(商品番号)
+    activate boudary
+        boudary -> control :商品検索(商品番号)
+            activate control
+                control -> entity : <<create>> 生成()
+            loop  商品カテゴリ数
+                control --> category : <<create>> 生成()
+                control -> entity : 商品カテゴリ検索()
+                activate entity
+                deactivate entity
+            end loop
+        boudary <-- control : 商品情報
+        boudary -> boudary : 商品情報表示(商品情報)
+        activate boudary
+        deactivate boudary
+    deactivate boudary
+deactivate user
+
+@enduml

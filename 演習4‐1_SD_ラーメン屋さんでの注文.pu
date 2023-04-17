@@ -1,0 +1,22 @@
+@startuml
+hide footbox
+actor 客 as customer 
+participant フロア店員 as clerk 
+participant 料理人 as cheif
+skinparam ParticipantBackgroundColor white
+skinparam ParticipantBorderColor black
+mainframe sd ラーメン屋さん 
+activate customer
+    activate clerk
+        activate cheif
+            customer -> clerk : ラーメンを注文する
+            clerk -> cheif : 料理を支持する
+            cheif -> cheif : 調理をする
+            clerk <-- cheif : ラーメン
+            customer <-- clerk : ラーメン
+        deactivate cheif
+    deactivate clerk
+deactivate customer
+
+
+@enduml

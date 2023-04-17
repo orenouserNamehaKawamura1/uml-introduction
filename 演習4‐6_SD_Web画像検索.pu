@@ -1,0 +1,21 @@
+@startuml
+hide footbox
+actor ":ユーザ" as user
+participant ":ブラウザ" as browse
+participant ":Webサーバ" as web
+participant ":画像サーバ" as image
+activate user
+    user -> browse :画像リンクボタンを押す
+    activate browse
+        browse -> web : ファイル名を渡す
+        activate web
+            activate image
+                web -> image :命令を渡す
+                image -> image :画像ファイルを探す
+                image --> web :画像ファイル
+            deactivate image
+        web --> browse 画像ファイル
+     browse --> user :画像の閲覧
+    deactivate browse
+deactivate user
+@enduml

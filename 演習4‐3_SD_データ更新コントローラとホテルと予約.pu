@@ -1,0 +1,16 @@
+@startuml
+hide footbox
+participant ":データ更新" as control <<control>>
+participant ":ホテル" as hotel <<hotel>>
+participant ":予約"    as reserve 
+mainframe sd ホテルと予約
+activate control
+    control --> hotel : 予約()する <<create>>
+    activate hotel        
+            hotel -> reserve  : create()
+            hotel -> hotel : 予約登録()
+        activate hotel
+        deactivate hotel
+    deactivate hotel
+deactivate control
+@enduml
