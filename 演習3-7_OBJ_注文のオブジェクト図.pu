@@ -1,0 +1,42 @@
+@startuml
+left to right direction
+    object "<u>顧客1:重要顧客</u>" as customer1{
+        氏名 = 高橋洋平さん
+    }
+    object "<u>注文1:注文</u>" as order1{
+        注文日 = 11月21日
+        数量 = 1台
+    }       
+    object "<u>注文2:注文</u>" as order2{
+        注文日 = 11月21日
+        数量 = 2台
+    }       
+    object "<u>商品1:商品</u>" as item1{
+        商品名 = テレビ
+        型式 = V12345
+    }       
+    object "<u>商品2:商品</u>" as item2{
+        商品名 = 冷蔵庫
+        型式 = R8765
+    }       
+    object "<u>顧客2:顧客</u>" as customer2{
+        氏名 = 高田利恵さん
+    } 
+    object "<u>注文3:注文</u>" as order3{
+        注文日 = 12月23日
+        数量 = 1台
+    } 
+    object "<u>顧客3:顧客</u>" as customer3{
+        氏名=大坪直之さん
+    }  
+    object "<u>商品3:商品</u>" as item3{
+        商品名 = プロジェクタ
+        型式 = P1122
+    }          
+    customer1--order1  
+    customer1--order2
+    order1--item1
+    order2--item2
+    customer2--order3
+    order3--item2
+@enduml
