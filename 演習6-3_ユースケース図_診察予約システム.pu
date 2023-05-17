@@ -9,8 +9,8 @@ rectangle 予約システム {
     usecase 今の順番
 }
 user --> メニュー
-メニュー --> 予約と確認
-メニュー --> 今の順番
-予約と確認 --> あなたの順番
-doctor --> 今の順番
+user --> 予約と確認
+user --> 今の順番
+user --> あなたの順番
+今の順番 <-- doctor
 @enduml
