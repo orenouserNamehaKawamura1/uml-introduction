@@ -1,0 +1,19 @@
+@startuml
+hide footbox
+actor 客 as user
+participant 料金装置 as price
+participant ボタン as button
+participant ベンダー装置 as bendar
+
+mainframe sd 自動販売機
+user ->price : 料金を投入
+activate price
+    price -> button : 料金以上の飲み物のボタンが点灯する
+    activate button
+        button -> bendar : 飲み物を選択する
+            activate bendar
+                bendar -> bendar : 飲み物を取り出す    
+    deactivate button
+deactivate price
+    
+@enduml
