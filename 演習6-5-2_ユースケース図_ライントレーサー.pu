@@ -1,0 +1,17 @@
+@startuml
+left to right direction
+actor 利用者 as user
+actor 光センサー
+actor 左モーター
+actor 右モーター
+
+rectangle ライントレーサー{
+    usecase 右境界線上を進行する
+}
+
+user --> 右境界線上を進行する
+光センサー --> 右境界線上を進行する
+左モーター --> 右境界線上を進行する
+右モーター --> 右境界線上を進行する
+
+@enduml
